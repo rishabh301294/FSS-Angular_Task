@@ -1,0 +1,5 @@
+1. Download the ZIP content from the github profile.
+Extract the zip file in your local.
+Open the IDE and select the extracted folder to open.
+Run NPM INSTALL from the terminal to download the node modules.
+Compile and run the program using ng serve --open.

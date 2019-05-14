@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Set Property for the input type</h1>
+<div mat-dialog-content>
+
+  <!-- <mat-form-field> -->
+  <div
+    *ngIf="data.inputType =='text' || data.inputType=='password'|| data.inputType =='email' || data.inputType=='number'">
+    <div class="row">
+      <Label class="col-sm-6 mt-2">Input Type:</Label>
+      <select matInput class="col-sm-6 mt-2" name="Select Option" [(ngModel)]="data.inputType">
+        <option matInput value="" disabled selected>--Select One--</option>
+        <option value="text">text</option>
+        <option value="password">password</option>
+        <option value="email">email</option>
+        <option value="number">number</option>
+      </select>
+    </div>
+    <div class="row">
+      <Label class="col-sm-6 mt-2">Value</Label>
+      <input [(ngModel)]="data.inputValue" type="text" class="col-sm-6 mt-2">
+
+
+      <!-- </mat-form-field> -->
+    </div>
+  </div>
+
+  <div class="row" *ngIf="data.inputType =='checkbox'">
+    <Label class="col-sm-6 mt-2">Checkbox Label:</Label>
+    <select matInput class="col-sm-6 mt-2" name="Select Option" [(ngModel)]="data.checkboxValue">
+      <option matInput value="" disabled selected>--Select One--</option>
+      <option value="CheckBox">CheckBox</option>
+      <option value="CHECKBOX">CHECKBOX</option>
+
+    </select>
+  </div>
+  <div class="row" *ngIf="data.inputType =='button'">
+    <Label class="col-sm-6 mt-2">Button Type:</Label>
+    <select matInput class="col-sm-6 mt-2" name="Select Option" [(ngModel)]="data.buttonValue">
+      <option matInput value="" disabled selected>--Select One--</option>
+      <option value="Submit">Submit</option>
+      <option value="Reset">Reset</option>
+    </select>
+  </div>
+
+
+  <!-- </mat-form-field> -->
+
+  <div class="right" mat-dialog-actions>
+    <button class="ml-2" mat-button (click)="onNoClick()">CANCEL</button>
+    <button class="ml-2" mat-button [mat-dialog-close]="data" cdkFocusInitial>SAVE</button>
+  </div>
+
+</div>

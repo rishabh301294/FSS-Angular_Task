@@ -1,0 +1,42 @@
+<body>
+    <nav class="navbar navbar-expand-md">
+        <a class="navbar-brand" href="#">
+          <img src="assets/Images/FSS_Logo.png" width="80" height="65" alt="FSS-LOGO">
+        </a>
+
+      </nav>
+      <div class="outerDiv">
+  <h1>Thank You!!</h1>
+  <h1>You have selected the following options:</h1>
+  <div class="home">
+  <div  *ngFor="let item of user">
+    <div class="inner" *ngIf="item.label=='Input Box'">
+      <input type="text" value={{item.inputValue}}>
+    </div>
+    <div class="inner" *ngIf="item.label=='Select Box'">
+      <select  name="Select Option">
+        <option value="" disabled selected>Select Option</option>
+        <option value="books">Mongo DB</option>
+        <option value="html">Express JS</option>
+        <option value="css">Angular</option>
+        <option value="php">Node JS</option>
+      </select>
+    </div>
+    <div class="inner" *ngIf="item.label=='Check Box'">
+      <span> <input type="checkbox"> {{item.checkboxValue}} </span>
+    </div>
+    <div class="inner" *ngIf="item.label=='Radio Button'">
+      <input type="radio">
+    </div>
+    <div class="inner" *ngIf="item.label=='Button'">
+      <button type="button"> {{item.buttonValue}} </button>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+<footer class="footer">
+  <p>Developed by: Rishabh Srivastava</p>
+
+</footer>

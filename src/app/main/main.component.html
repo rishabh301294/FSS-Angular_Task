@@ -1,0 +1,88 @@
+<html>
+<head>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="#">
+      <img src="assets/Images/FSS_Logo.png" width="80" height="65" alt="FSS-LOGO">
+    </a>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <button class="btn btn-dark" (click)="editType()">PUBLISH</button>
+      </ul>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="column columnLeft column-todo">
+      <h2>LEFT PANEL</h2>
+      <div class="split"></div>
+      <div class="example-container">
+        <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
+          class="example-list" (cdkDropListDropped)="drop1($event)">
+          <table>
+            <tr>
+              <td *ngFor="let item of todo1" cdkDrag>
+                <div class="todo">{{item.label}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td *ngFor="let item of todo2" cdkDrag>
+                <div class="todo">{{item.label}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td class="todo1" colspan=2 *ngFor="let item of todo3" cdkDrag>
+                <div class="todo todo1">{{item.label}}</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="example-container">
+      </div>
+    </div>
+    <div class="column">
+      <h2>WORKSPACE</h2>
+      <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]"
+        class="example-list colMiddleBorder" (cdkDropListDropped)="drop($event)">
+
+        <div class="example-box-1" *ngFor="let item of done" cdkDrag>
+
+          <div *ngIf="item.label=='Input Box'">
+            <input class="workspaceItemWidth" type="text" value={{item.inputValue}}>
+          </div>
+          <div *ngIf="item.label=='Select Box'">
+            <select class="workspaceItemWidth" name="Select Option">
+              <option value="" disabled selected>Select Option</option>
+              <option value="books">Mongo DB</option>
+              <option value="html">Express JS</option>
+              <option value="css">Angular</option>
+              <option value="php">node JS</option>
+            </select>
+          </div>
+          <div *ngIf="item.label=='Check Box'">
+            <span> <input type="checkbox"> {{item.checkboxValue}} </span>
+          </div>
+          <div *ngIf="item.label=='Radio Button'">
+            <input type="radio">
+          </div>
+          <div *ngIf="item.label=='Button'">
+            <button class="workspaceItemWidth button1" type="button"> {{item.buttonValue}} </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column column-todo">
+      <h2>JSON STRUCTURE</h2>
+      <textarea cols='35' rows='16'>{{type}}</textarea>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+
+  <footer class="footer">
+    <p>Developed by: Rishabh Srivastava</p>
+
+  </footer>
+</body>
+</html>

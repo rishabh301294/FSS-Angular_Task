@@ -1,0 +1,237 @@
+.example-box
+  width: 80px
+  height: 80px
+  border: solid 1px #ccc
+  color: rgba(0, 0, 0, 0.87)
+  cursor: move
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  background: #fff
+  border-radius: 4px
+  position: relative
+  z-index: 1
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1)
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12)
+
+
+.example-box:active
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),0 8px 10px 1px rgba(0, 0, 0, 0.14),0 3px 14px 2px rgba(0, 0, 0, 0.12)
+
+  *
+  box-sizing: border-box
+
+
+
+.column
+  float: left
+  width: 40%
+  padding: 30px
+  max-height: 550px
+
+.column-todo
+  float: left
+  width: 30%
+  padding: 30px
+  max-height: 550px
+
+
+.row:after
+  content: ""
+  display: table
+  clear: both
+
+  .innerRow
+    margin: 25px
+    padding: 25px
+
+    .example-container
+  width: 400px
+  max-width: 100%
+  display: inline-block
+  vertical-align: top
+
+
+.example-list
+  //
+  min-height: 60px
+  border-radius: 4px
+  overflow: hidden
+  display: block
+  text-align: center
+
+
+
+.example-box
+  padding: 20px 10px
+  border-bottom: solid 1px #ccc
+  color: rgba(0, 0, 0, 0.87)
+  display: flex
+  align-items: center
+  justify-content: space-between
+  box-sizing: border-box
+  cursor: move
+  background: white
+  font-size: 14px
+  width: 30%
+  margin: 10px
+  text-align: center
+
+
+.cdk-drag-preview
+  box-sizing: border-box
+  border-radius: 4px
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),0 8px 10px 1px rgba(0, 0, 0, 0.14),              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+
+
+.cdk-drag-placeholder
+  opacity: 0
+
+
+.cdk-drag-animating
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+
+
+.example-box:last-child
+  border: none
+
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder)
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+
+.columnLeft
+  background-color: #F5D8D8
+  min-height: 526px
+
+.column
+  text-align: center
+  border-left-width: 2px
+  border-left-color: #808080
+  border-left-style: solid
+
+.navbar-expand-md
+  background-color: #E0E0E0
+  background-image: none
+  background-repeat: no-repeat
+
+.colMiddleBorder
+  border: dashed 1px #ccc
+  min-height: 400px
+
+
+.borderNone
+  border-bottom: none
+
+
+.example-box-1
+  width: 80px
+  height: 80px
+  color: rgba(0, 0, 0, 0.87)
+  cursor: move
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  background: #fff
+  border-radius: 4px
+  position: relative
+  z-index: 1
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1)
+  padding: 20px 10px
+  color: rgba(0, 0, 0, 0.87)
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  box-sizing: border-box
+  cursor: move
+  background: white
+  font-size: 14px
+  width: 40%
+  margin-left: 10%
+
+.workspaceItemWidth
+  width: 380px
+  text-align: left
+
+textarea
+  border: none
+  text-align:left
+
+#parent
+  width: 100%
+  clear: both
+
+#child-left
+  float: left
+  width: 10px
+
+#child-right
+  float: left
+  width: 30px
+
+.footer
+  border: solid 1px black
+  text-align: center
+
+.columnLeft
+  background-color: #F5D8D8
+  height: 100%
+
+html, body
+  margin: 0
+  height: 100%
+  overflow: hidden
+
+
+table
+  width: 100%
+
+td
+  align-content:  center
+  background-color: transparent
+  padding: 20px
+  width: 30%
+  text-align: center
+  horizontal-align: middle
+
+.todo
+  background-color: white
+  border: solid 1px black
+  padding: 10px
+  margin: 10px
+  width: 80px
+  height: 80px
+  color: rgba(0, 0, 0, 0.87)
+  cursor: move
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  background: #fff
+  border-radius: 4px
+  position: relative
+  z-index: 1
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1)
+  padding: 20px 10px
+  color: rgba(0, 0, 0, 0.87)
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  box-sizing: border-box
+  cursor: move
+  background: white
+  font-size: 14px
+  margin-left: 10%
+
+.todo1
+  margin-left: 90px
+  padding-left: 20px
+
+.button1
+  text-align: center
+
+
+
